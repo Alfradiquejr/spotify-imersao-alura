@@ -90,3 +90,54 @@ body {
 .library .library__content .fa-plus {
     margin: 24px 10px;
 }
+
+.library .section__playlist {
+    background-color: #1b1b1b;
+    padding: 10px 0px 10px 10px;
+    border-radius: 8px;
+}
+
+.library .section__playlist .title {
+    font-family: "DM Sans", sans-serif;
+    padding: 8px;
+    font-size: 17px;
+    display: flex;
+}
+
+.library .section__playlist .subtitle {
+    font-family: "DM Sans", sans-serif;
+    padding: 8px;
+    font-size: 12px;
+    display: flex;
+}
+
+.library .section__playlist .playlist__button {
+    margin-top: 25px;
+    border-radius: 30px;
+    padding: 12px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+}
+
+.library .cookies {
+    padding: 35px 0 35px 15px;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "DM Sans", sans-serif;
+}
+
+.library .cookies a {
+    text-decoration: none;
+    color: #b3b3b3;
+}
+
+.library .language .language__button {
+    background-color: transparent;
+    padding: 8px;
+    margin-bottom: 8px;
+    color: #b3b3b3;
+    border: 1px solid #FFF;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    border-radius: 30px;
+}
