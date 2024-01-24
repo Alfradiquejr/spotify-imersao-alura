@@ -4,6 +4,7 @@
 
 body {
     background-color: #000;
+    font-family: var(--font-dm-sans);
 }
 
 .sidebar {
@@ -46,7 +47,11 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
-    font-family: "DM Sans", sans-serif;
+}
+
+.sidebar nav ul li:hover {
+    color: #FFF;
+    text-decoration: underline;
 }
 
 .library {
@@ -75,7 +80,6 @@ body {
     font-weight: 700;
     font-size: 16px;
     text-align: center;
-    font-family: "DM Sans", sans-serif;
     padding: 20px 10px;
     display: flex;
     text-decoration: none;
@@ -91,6 +95,7 @@ body {
 
 .library .library__content .fa-plus {
     margin: 24px 10px;
+    cursor: pointer;
 }
 
 .library .section-playlist {
@@ -114,7 +119,6 @@ body {
 .library .section-playlist .section-playlist__content .text {
     padding-bottom: 14px;
     color: #FFF;
-    font-family: "DM Sans", sans-serif;
 }
 
 .library .section-playlist .section-playlist__content .title {
@@ -137,24 +141,24 @@ body {
     padding: 10px;
     border: 0px;
     width: 113px;
-    font-family: "DM Sans", sans-serif;
     font-weight: 700;
     background-color: #FFF;
     color: #000;
 }
 
 .library .section-playlist .section-playlist__content .section-playlist__button:hover {
-    background-color: rgb(88, 202, 88);
+    transform: scale(1.1);
 }
 
 .library .cookies {
     margin: 25px 20px;
+    
 }
 
 .library .cookies a {
     text-decoration: none;
     color: #b3b3b3;
-    font-family: "DM Sans", sans-serif;
+    padding: 4px;
     font-weight: 500;
     font-size: 10px;
 }
@@ -170,48 +174,54 @@ body {
     padding: 8px;
     color: #FFF;
     border: 1px solid #878787;
-    font-family: "DM Sans", sans-serif;
     font-weight: bold;
     width: 170px;
     cursor: pointer;
     border-radius: 20px;
 }
 
+.library .language .language__button:hover {
+    transform: scale(1.1);
+}
+
 .footer-announcement {
-    z-index: 999;
-    background-image: linear-gradient(to right, #9f1fa3, #6c4599, #5070ac);
-    position: absolute;
+    background-image: linear-gradient(to right, #a333a7, #724f99, #5070ac);
+    position: fixed;
     bottom: 0;
+    right: 0;
+    left: 0;
+    cursor: pointer;
     display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    width: 98vw;
+    justify-content: space-between;
+    padding: 15px 40px;
 }
 
-.footer-announcement .footer-announcement__content {
-    display: flex;
-    flex-direction: column;
+.footer-announcement .footer-announcement__text {
+    flex-shrink: 0;
 }
-.footer-announcement .footer-announcement__content .text {
-    padding-bottom: 8px;
+
+.footer-announcement .footer-announcement__title {
+    font-weight: 400;
+    font-size: 0.75rem;
+    margin-bottom: 0.625rem;
     color: #FFF;
-    font-size: 14px;
-    font-family: "DM Sans", sans-serif;
-}
-
-.footer-announcement .footer-announcement__content .title {
-    font-weight: 600;
     text-transform: uppercase;
 }
 
-.footer-announcement .footer-announcement__content .subtitle {
-    font-weight: 600;
+.footer-announcement .footer-announcement__subtitle {
+    font-weight: 500;
+    color: #FFF;
+    font-size: 0.875rem;
 }
 
-.footer-announcement .footer-announcement__button {
-    border-radius: 20px;
-    padding: 10px;
+.footer-announcement button {
+    background-color: #FFF;
+    color: #000;
+    padding: 0.35rem;
+    border-radius: 2.5rem;
     width: 150px;
-    font-weight: 700;
-    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 0px;
+    flex-shrink: 0;
 }
