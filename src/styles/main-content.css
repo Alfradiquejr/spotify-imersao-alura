@@ -1,7 +1,6 @@
 /* HEADER */
-
 .main-container {
-    max-width: 80 rem;
+    max-width: 80rem;
     height: 100rem;
     margin-left: 20rem;
     margin-right: 3.5rem;
@@ -11,8 +10,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.625rem;
-    margin: 0.9rem 1.25rem 1.25rem 1.25rem;
+    padding: 1rem;
+    margin: 0.625rem;
     border-radius: 0.5rem;
     background-color: #121212;
 }
@@ -27,7 +26,8 @@
     margin-right: 0.9375rem;
 }
 
-.arrow-left, .arrow-right {
+.arrow-left, 
+.arrow-right {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,7 +53,7 @@
     margin-left: 0.5rem;
     background-color: #242424;
     border-radius: 31.25rem;
-    border: 1px solid transparent;
+    border: 0.0625rem solid transparent;
 }
 
 .header__search img {
@@ -72,7 +72,7 @@
 }
 
 .header__login .subscribe {
-    color: #a7a7a7;
+    color: var(--text-sub);
     font-size: 1rem;
     font-weight: 700;
     background-color: transparent;
@@ -82,31 +82,264 @@
 .header__login .login {
     width: 6.25rem;
     height: 3rem;
-    color: #000;
+    color: var(--text-base-dark);
     font-size: 1rem;
     font-weight: 700;
     border-radius: 2.5rem;
 }
 
-.playlist-container {
-    background-color: #121212;
-    margin: -0.8rem 1.25rem 1.25rem 1.25rem;
-    border-radius: 0.5rem;
-    padding: 0.625rem;
+/* HOVER */
+
+.header__search:hover {
+    border: 0.0625rem solid #fff;
 }
 
-.playlist-container .greeting {
-    color: #FFF;
-    padding: 0.5rem;
-    margin: 1rem;
+.header__login .subscribe:hover {
+    transform: scale(1.04);
+    color: var(--text-base-light);
+}
+
+.header__login .login:hover {
+    transform: scale(1.04);
+}
+/* FIM HOVER */
+/*FIM HEADER */
+
+/* PLAYLIST */
+.playlist-container {
+    background-color: #121212;
+    margin: 1.25rem;
+    height: 72vh;
+    border-radius: 0.625rem;
+    padding-top: 1rem;
+}
+
+.playlist {
+    margin: 3rem;
+}
+
+.playlist #greeting {
+    color: var(--text-base-light);
+    margin-bottom: 3rem;
     font-size: 2rem;
     font-weight: 700;
 }
 
-.playlist-container .session {
-    color: #FFF;
-    padding: 0.5rem;
-    margin: 1rem;
+.playlist .session {
+    color: var(--text-base-light);
     font-size: 1.5rem;
     font-weight: 700;
 }
+
+/* SCROLL */
+
+.offer__scroll-container {
+    max-height: 52vh;
+    margin: 3rem;
+    overflow-y: auto;
+}
+
+.offer__scroll-container::-webkit-scrollbar {
+    width: 0.0625rem; 
+}
+
+/* Thumb */
+.offer__scroll-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+/* FIM SCROLL */
+
+.offer__list-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cards {
+    position: relative;
+    width: 13.75rem;
+    height: 12.5rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.cards span {
+    padding: 1rem;
+    position: absolute;
+    color: var(--text-base-light);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* COLOR CARDS */
+.card1 {
+    background-color: rgb(0, 100, 80);
+}
+
+.card2 {
+    background-color: rgb(132, 0, 231);
+}
+.card3 {
+    background: rgb(30, 50, 100);
+}
+.card4 {
+    background: rgb(140, 25, 50);
+}
+.card5 {
+    background: rgb(232, 17, 91);
+}
+.card6 {
+    background: rgb(83, 122, 161);
+}
+.card7 {
+    background: rgb(142, 102, 172);
+}
+.card8 {
+    background: rgb(20, 138, 8);
+}
+.card9 {
+    background: rgb(30, 50, 100);
+}
+.card10 {
+    background: rgb(233, 20, 41);
+}
+.card11 {
+    background: rgb(80, 55, 80);
+}
+.card12 {
+    background: rgb(216, 64, 0);
+}
+.card13 {
+    background: rgb(186, 93, 7);
+}
+.card14 {
+    background: rgb(0, 30, 80);
+}
+.card15 {
+    background: rgb(60, 30, 80);
+}
+  /* FIM COLOR CARDS */
+
+.offer__list-item img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: 6.688rem;
+    transform: rotate(25deg) translate(18%, -2%);
+}
+
+/* CARD ARTISTA */
+
+.artist {
+    --column-count: 5;
+    --grid-gap: 1.5rem;
+    --min-container-width: 23.25rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.grid-container {
+    grid-gap: var(--grid-gap);
+    display: grid;
+    grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
+    min-width: var(--min-container-width);
+}
+
+.artist-card {
+    background: #181818;
+    border-radius: 0.5rem;
+    -ms-flex: 1;
+    flex: 1;
+    isolation: isolate;
+    padding: 1rem;
+    position: relative;
+    transition: background-color 0.3s ease;
+    width: 100vw;
+}
+
+.artist-card:hover {
+    background-color: #252525;
+}
+
+.card-img {
+    padding-bottom: 100%;
+    position: relative;
+    width: 100vw;
+    margin-bottom: 1rem;
+}
+
+.artist-img {
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    border-radius: 50%;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-height: 3.875rem;
+}
+
+.card-text a {
+    display: inline-block;
+    max-width: 100vw;
+    vertical-align: middle;
+}
+
+.artist-name {
+    box-sizing: border-box;
+    margin-block: 0px;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-block-end: 0.5rem;
+}
+
+.artist-categorie {
+    color: #6a6a6a;
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.play {
+    position: relative;
+}
+
+.play .fa-play {
+    position: absolute;
+    right: 0.625rem;
+    top: 7.5rem;
+    padding: 1.125rem;
+    background-color: #1db954;
+    border-radius: 100%;
+    font-size: 0.875rem;
+    opacity: 0;
+    transition: all ease 0.4s;
+}
+
+.artist-card:hover .play .fa-play {
+    opacity: 1;
+    transform: translateY(-1.25rem);
+}
+
+.play .fa-play:hover {
+    padding: 1.25rem;
+    cursor: pointer;
+}
+
+#result-artist {
+    padding: 1.25rem 2.5rem;
+}
+
+/* FIM CARD ARTISTA */
