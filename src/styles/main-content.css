@@ -66,8 +66,10 @@
     background: transparent;
     border: none;
     padding: 0 6.25rem 0 0.75rem;
-    color: #FFF;
+    color: var(--text-base-light);
     text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     outline: none;
 }
 
@@ -108,14 +110,14 @@
 /* PLAYLIST */
 .playlist-container {
     background-color: #121212;
-    margin: 1.25rem;
-    height: 72vh;
+    margin: 0.625rem;
+    height: 68vh;
     border-radius: 0.625rem;
     padding-top: 1rem;
 }
 
 .playlist {
-    margin: 3rem;
+    margin: 1.5rem;
 }
 
 .playlist #greeting {
@@ -134,8 +136,8 @@
 /* SCROLL */
 
 .offer__scroll-container {
-    max-height: 52vh;
-    margin: 3rem;
+    max-height: 43vh;
+    margin: 1.5rem;
     overflow-y: auto;
 }
 
@@ -153,11 +155,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-items: center;
-    grid-gap: 16px;
+    grid-gap: 1rem;
     gap: 1rem;
     margin-bottom: 1rem;
 
-     /* CODIGO COM JS CALCULANDO OS CARDS POR COLUNA */
+     /* CODIGO COM JS CALCULANDO OS CARDS POR COLUNA */ 
     display: grid;
     gap: 1rem;
     grid-gap: 2rem;
@@ -182,50 +184,50 @@
 
 /* COLOR CARDS */
 .card1 {
-    background-color: rgb(0, 100, 80);
+    background-color: var(--card1);
 }
 
 .card2 {
-    background-color: rgb(132, 0, 231);
+    background-color: var(--card2);
 }
 .card3 {
-    background: rgb(30, 50, 100);
+    background: var(--card3);
 }
 .card4 {
-    background: rgb(140, 25, 50);
+    background: var(--card4);
 }
 .card5 {
-    background: rgb(232, 17, 91);
+    background: var(--card5);
 }
 .card6 {
-    background: rgb(83, 122, 161);
+    background: var(--card6);
 }
 .card7 {
-    background: rgb(142, 102, 172);
+    background: var(--card7);
 }
 .card8 {
-    background: rgb(20, 138, 8);
+    background: var(--card8);
 }
 .card9 {
-    background: rgb(30, 50, 100);
+    background: var(--card9);
 }
 .card10 {
-    background: rgb(233, 20, 41);
+    background: var(--card10);
 }
 .card11 {
-    background: rgb(80, 55, 80);
+    background: var(--card11);
 }
 .card12 {
-    background: rgb(216, 64, 0);
+    background: var(--card12);
 }
 .card13 {
-    background: rgb(186, 93, 7);
+    background: var(--card13);
 }
 .card14 {
-    background: rgb(0, 30, 80);
+    background: var(--card14);
 }
 .card15 {
-    background: rgb(60, 30, 80);
+    background: var(--card15);
 }
   /* FIM COLOR CARDS */
 
@@ -266,7 +268,8 @@
     padding: 1rem;
     position: relative;
     transition: background-color 0.3s ease;
-    width: 100vw;
+    width: 9.375rem;
+    height: 9.375rem;
 }
 
 .artist-card:hover {
@@ -276,34 +279,38 @@
 .card-img {
     padding-bottom: 100%;
     position: relative;
-    width: 100vw;
+    width: 100%;
     margin-bottom: 1rem;
 }
 
 .artist-img {
-    height: 100vh;
+    height: 100%;
     left: 0;
     position: absolute;
     top: 0;
-    width: 100vw;
+    width: 100%;
+    object-fit: cover;
     border-radius: 50%;
 }
 
 .card-text {
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    min-height: 3.875rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    background-color: rgba(68, 31, 31, 0.281); /* exemplo de cor de fundo para destacar o texto */
 }
 
 .card-text a {
-    display: inline-block;
     max-width: 100vw;
     vertical-align: middle;
+    text-decoration: none;
+    color: #FFF;
 }
+
+
 
 .artist-name {
     box-sizing: border-box;
@@ -317,6 +324,7 @@
     color: #6a6a6a;
     font-weight: 400;
     font-size: 0.875rem;
+    display: block;
 }
 
 .play {
@@ -337,7 +345,7 @@
 
 .artist-card:hover .play .fa-play {
     opacity: 1;
-    transform: translateY(-1.25rem);
+    transform: translateY(-20px);
 }
 
 .play .fa-play:hover {
